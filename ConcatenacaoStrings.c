@@ -14,7 +14,7 @@ gets(string2);
 
 strcat(string1,string2);
 
-printf("Strings concatenadas: %s", string2);
+printf("Strings concatenadas: %s", string1);
 
 
 }
