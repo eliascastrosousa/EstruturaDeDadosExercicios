@@ -26,6 +26,6 @@ for(c=0; c<strlen(texto);c++){
     }
 }
 
-printf("O texto sem espaços em branco fica assim:\n\n\"%s\"", texto);
+printf("O texto sem espaços em branco fica assim:\n\n\"%s\"", texto2);
 
 }
