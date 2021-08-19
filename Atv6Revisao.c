@@ -7,8 +7,8 @@
 main(){
 setlocale(LC_ALL,"portuguese");
 
-char frase[TAM], fraseformatada[TAM];
-int c=0, espacos=0, ;
+char frase[101], fraseformatada[101];
+int c=0, espacos=0;
 
 printf("Digite uma frase: ");
 gets(frase);
@@ -22,16 +22,13 @@ printf("A Frase é: %s \n",frase);
 printf("A Frase tem %d Caracteres e %d espaço(s) em branco. ", strlen(frase) ,espacos);
 
 for(c=0; c<strlen(frase);c++){
-    if(frase[c] != ' '){
-            fraseformatada[c] = frase[c];
-
-    }else{
-        espacos++;
+    if(frase[c] == ' '){
+            frase[c]=frase[c+1];
     }
 }
 
-printf("\nO texto sem espaços em branco fica assim: %s",fraseformatada);
+printf("\nO texto sem espaços em branco fica assim: %s",frase);
 
-//for(c=0; c<strlen(fraseformatada);c++){ printf("%c", fraseformatada[c]);}
+//for(c=0; c<strlen(frase);c++){ printf("%c", frase[c]);}
 
 }
