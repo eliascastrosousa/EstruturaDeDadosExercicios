@@ -28,7 +28,7 @@ for(c=0; c<strlen(frase);c++){
     }
 }
 
-printf("\nO texto sem espaços em branco fica: %s",frase);
+printf("\nO texto sem espaços fica: %s",frase);
 
 //for(c=0; c<strlen(frase);c++){ printf("%c", frase[c]);}
 
