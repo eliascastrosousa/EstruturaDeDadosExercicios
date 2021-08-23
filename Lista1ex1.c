@@ -15,7 +15,7 @@ scanf("%d", &n);
 
 printf("\nO numero inteiro Digitado é: %d", n);
 
-printf("\nDigite um numero real: ");
+printf("\n\nDigite um numero real: ");
 scanf("%f", &n2);
 
 printf("\nO numero real Digitado é: %0.2f\n", n2);
