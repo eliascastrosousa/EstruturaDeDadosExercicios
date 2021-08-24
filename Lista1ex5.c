@@ -1,17 +1,23 @@
-/* 5. Efetue a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores lidos */
+/*5. Efetue a leitura de três valores e apresente como resultado a soma dos quadrados dos três
+valores lidos.*/
 
 #include <stdio.h>
 #include <locale.h>
 
-main(){
-float n1,quad;
+int n1,n2,n3,soma;
 
+main(){
 setlocale(LC_ALL, "portuguese");
 
-printf("Digite o numero real: ");
-scanf("%f", &n1);
+printf("Digite o 1º Valor: ");
+scanf("%d",&n1);
+printf("Digite o 2º Valor: ");
+scanf("%d",&n2);
+printf("Digite o 3º Valor: ");
+scanf("%d",&n3);
 
-quad = n1*n1;
+soma = (n1*n1)+(n2*n2)+(n3*n3);
 
-printf("\nO numero %0.2f ao quadrado é: %0.2f",n1,quad);
+printf("a soma dos quadrados dos três valores lidos é igual a: %d",soma);
+
 }
