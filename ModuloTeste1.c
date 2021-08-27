@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//variavel local
 int calculaTotal(int num1,int num2);
 
 int main(){
