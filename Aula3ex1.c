@@ -23,13 +23,11 @@ for(c=0;c<tam;c++){
     printf("Digite a idade do funcionario [%d]: ",c+1);
     scanf("%d",&func[c].idade);
 }
-system("pause");
-
 
 for(c=0;c<tam;c++){
     printf("\n\nNome do funcionario [%d]: %s",c+1,func[c].nome);
     printf("\nID do funcionario [%d]: %d",c+1,func[c].id);
     printf("\nIdade do funcionario [%d]: %d",c+1,func[c].idade);
 }
-
+printf("\n\n");
 }
