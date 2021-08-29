@@ -3,14 +3,15 @@
 #include <string.h>
 #include <locale.h>
 
+//modulos
 float CalculoVantagens(float salario_h,int numero_f,int numero_h, float salario_f);
 float CalculoDeducoes(float salario_h,int numero_f);
 
-void main(){
-
-//float sal_bruto,sal_familia, vantagens,
+//variaveis globais
 float sal_hora, sal_filho, resultado1,resultado2;
 int num_horas, num_filhos;
+
+void main(){
 
 printf("Digite o Valor da Hora/Salario: ");
 scanf("%f",&sal_hora);
@@ -28,25 +29,23 @@ resultado1 = CalculoVantagens(sal_hora, num_horas, num_filhos, sal_filho);
 resultado2 = CalculoDeducoes(sal_hora,num_horas);
 }
 
+//chamada do modulo
 float CalculoVantagens(float salario_h,int numero_h ,int numero_f ,float salario_f ){
-
-float salario_b = numero_h*salario_h;
-float salario_fam = (numero_f*salario_f);
-float vantagens = salario_b+salario_fam;
-
-//printf("\n\nO valor do Salario e: %0.2f\nO valor do Salario Familia e de: %0.2f\nTotal de Vantagens: %0.2f\n\n",salario_b, salario_fam, vantagens);
-
-printf("\n\nO valor do Salario e: %0.2f", salario_b);
-printf("\nO valor do Salario Familia e de: %0.2f", salario_fam);
-printf ("\nTotal de Vantagens: %0.2f\n\n",vantagens);
-
+    float salario_b = numero_h*salario_h, salario_fam = (numero_f*salario_f), vantagens = salario_b+salario_fam;
+    printf("\n\n------------------------------------");
+    printf("\nO valor do Salario e: R$R$%0.2f \nO valor do Salario Familia e de: R$%0.2f \nTotal de Vantagens: R$%0.2f\n\n",salario_b, salario_fam, vantagens);
 }
 
 float CalculoDeducoes(float salario_h,int numero_f){
-float salario_b = salario_h*numero_f;
-float INSS = salario_b*0.08;
-printf("Valor do INSS a ser pago: %0.2f",INSS);
+    float salario_b = salario_h*numero_f, INSS = salario_b*0.08, IRPF = salario_b*0.12, deducoes = INSS+IRPF;
 
-IF
+    printf("------------------------------------");
+    printf("\nValor do INSS a ser pago: R$%0.2f \nValor do IRPR a ser pago: R$%0.2f \nTotal de deducoes e de: R$%0.2f",INSS,IRPF,deducoes);
+    printf("",IRPF);
+    printf("\n------------------------------------\n\n");
+
+
 }
+
+
 
