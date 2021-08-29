@@ -3,7 +3,7 @@
 #include <string.h>
 #include <locale.h>
 
-int calculatotal(int num1 , int num2); //DEFINO O MODULO E SUAS VARIAVEIS
+int calculatotal(int num1 , int num2); //DEFINO O MODULO E Seus parametros
 
 int main(){
 setlocale(LC_ALL,"portuguese");

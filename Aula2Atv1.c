@@ -4,11 +4,12 @@
 #include <locale.h>
 
 float CalculoVantagens(float salario_h,int numero_f,int numero_h, float salario_f);
+float CalculoDeducoes(float salario_h,int numero_f);
 
-int main(){
+void main(){
 
 //float sal_bruto,sal_familia, vantagens,
-float sal_hora, sal_filho, resultado;
+float sal_hora, sal_filho, resultado1,resultado2;
 int num_horas, num_filhos;
 
 printf("Digite o Valor da Hora/Salario: ");
@@ -23,8 +24,8 @@ scanf("%d",&num_filhos);
 printf("Digite o valor do Salario por filho: ");
 scanf("%f",&sal_filho);
 
-resultado = CalculoVantagens(sal_hora, num_horas, num_filhos, sal_filho);
-
+resultado1 = CalculoVantagens(sal_hora, num_horas, num_filhos, sal_filho);
+resultado2 = CalculoDeducoes(sal_hora,num_horas);
 }
 
 float CalculoVantagens(float salario_h,int numero_h ,int numero_f ,float salario_f ){
@@ -40,3 +41,12 @@ printf("\nO valor do Salario Familia e de: %0.2f", salario_fam);
 printf ("\nTotal de Vantagens: %0.2f\n\n",vantagens);
 
 }
+
+float CalculoDeducoes(float salario_h,int numero_f){
+float salario_b = salario_h*numero_f;
+float INSS = salario_b*0.08;
+printf("Valor do INSS a ser pago: %0.2f",INSS);
+
+IF
+}
+

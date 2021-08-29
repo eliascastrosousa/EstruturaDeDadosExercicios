@@ -19,7 +19,7 @@ printf("Nome completo: ",sobrenome_completo);
 }
 
  char calculatotal(char nome , char sobrenome){
-    return strcpy(nome + sobrenome);
+    return (nome + sobrenome);
 }
 
 
