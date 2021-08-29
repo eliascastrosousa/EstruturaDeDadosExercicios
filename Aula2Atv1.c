@@ -5,7 +5,7 @@
 
 //modulos
 float CalculoVantagens(float salario_h,int numero_f,int numero_h, float salario_f);
-float CalculoDeducoes(float salario_h,int numero_f);
+float CalculoDeducoes(float salario_h,int numero_h);
 
 //variaveis globais
 float sal_hora, sal_filho, resultado1,resultado2;
@@ -39,8 +39,8 @@ float CalculoVantagens(float salario_h,int numero_h ,int numero_f ,float salario
 }
 
 //chamada do modulo descontos
-float CalculoDeducoes(float salario_h,int numero_f){
-    float salario_b = salario_h*numero_f, INSS = salario_b*0.08, IRPF = salario_b*0.12, deducoes = INSS+IRPF;
+float CalculoDeducoes(float salario_h,int numero_h){
+    float salario_b = salario_h*numero_h, INSS = salario_b*0.08, IRPF = salario_b*0.12, deducoes = INSS+IRPF;
 
     printf("------------------------------------");
     printf("\nValor do INSS a ser pago: R$%0.2f \nValor do IRPR a ser pago: R$%0.2f \nTotal de deducoes e de: R$%0.2f",INSS,IRPF,deducoes);

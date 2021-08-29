@@ -23,5 +23,5 @@ void troca(int *x, int *y){
 
     temp = *x ; // <- recebe o valor de x
     *x = *y ; // <- x recebe o valor de y
-    *y = temp ; // <- y recebe o valor de temp
+    *y = temp    ; // <- y recebe o valor de temp
 }
