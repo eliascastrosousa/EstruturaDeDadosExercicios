@@ -9,7 +9,7 @@ valor total lido, mostre:
 #include <locale.h>
 
 main(){
-setlocale(LC_ALL,"portuguese");
+setlocale(LC_ALL,"Portuguese");
 float valor,desconto,comissao;
 
 printf("Digite o valor: ");
@@ -18,7 +18,7 @@ desconto = valor*10/100;
 
 printf("\nO total a pagar com desconto de 10%: R$%0.2f",valor-desconto);
 printf("\nO valor de cada parcela, no parcelamento de 3 x sem juros: R$%0.2f\n",valor/3);
-printf("\nA comissão do vendedor caso de a venda seja a vista: R$%0.2f",(valor-desconto)*0.05);
-printf("\nA comissão do vendedor, no caso de a venda ser parcelada: R$%0.2f\n\n",valor*0.05);
+printf("\nA comissao do vendedor caso de a venda seja a vista: R$%0.2f",(valor-desconto)*0.05);
+printf("\nA comissao do vendedor, no caso de a venda ser parcelada: R$%0.2f\n\n",valor*0.05);
 
 }

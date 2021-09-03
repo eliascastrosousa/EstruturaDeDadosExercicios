@@ -8,7 +8,7 @@ int main(){
 
 int z = CalculaMaior(100,200);
 printf("Maior e: %d\n\n",z);
-//return 0;
+return 0;
 }
 
 //funcao CalculaMaior
@@ -19,3 +19,4 @@ if(x >y){
     return y;
   }
 }
+
