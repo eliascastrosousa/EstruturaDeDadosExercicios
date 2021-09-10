@@ -14,7 +14,7 @@ struct funcionario{
 int c=0;
 
 void main(){
-    
+
 struct funcionario func[tam]; //func1, func2, func3, func4, func5;
 
 for(c=0;c<tam;c++){
@@ -24,7 +24,7 @@ for(c=0;c<tam;c++){
 
     getchar();
     printf("Digite o nome do funcionario [%d]: ",c+1);
-    fgets(func[c].nome,30,stdin);
+    fgets(func[c].nome,29,stdin);
 
     printf("Digite a idade do funcionario [%d]: ",c+1);
     scanf("%d",&func[c].idade);
