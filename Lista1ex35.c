@@ -1,7 +1,6 @@
-/*36. Ler uma velocidade em km/h (quilômetros por hora) e apresentá-la convertida em 𝑚/𝑠
-(metros por segundo). A fórmula de conversão é: 𝑀 = 𝑘/3,6, sendo 𝐾 a velocidade em 𝑘𝑚/ℎ
-e 𝑀 em m/s.
-*/
+/*35. Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Kelvin. A
+fórmula de conversão é: 𝐾 = 𝐶 + 273,15, sendo 𝐶 a temperatura em Celsius e 𝐾
+atemperatura em Kelvin*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,13 +8,15 @@ e 𝑀 em m/s.
 
 
 int main(int argc, char const *argv[]){
-	float km,ms;
+	float cel,kel;
 
-	printf("Digite a velocidade em km/h (quilometros por hora): ");
-	scanf("%f",&km);
+	printf("Digite a Temperatura em Graus Celsius: ");
+	scanf("%f",&cel);
 
-	ms = km/3.6;
+	kel = cel+273.15;
 
-	printf("%0.2fkm/h Convertido em m/s e: %0.2f ",km, ms);
+	printf("%0.2fC Convertido em Graus Kelvin e: %0.2f ",cel,kel);
 	return 0;
 }
+
+
