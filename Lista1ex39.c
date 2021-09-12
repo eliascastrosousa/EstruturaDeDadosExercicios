@@ -8,7 +8,7 @@ conversão é: 𝑀 = 𝐾/1,61 , sendo 𝐾 a distância em quilômetros e 𝑀
 
 
 int main(int argc, char const *argv[]){
-	float km,mi;
+	float km=0,mi=0;
 
 	printf("Digite a distancia em km/h: ");
 	scanf("%f",&mi);
