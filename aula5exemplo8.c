@@ -22,6 +22,8 @@ int main(){
 
 	printf("\n\n");
 	fclose(f);
+
+	
 	return 0;
 
 }

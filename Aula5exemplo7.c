@@ -19,13 +19,6 @@ int main(){
 	 	printf("Erro na gravação! \n");
 	}
 
-	/*
-	for (int i = 0; i < strlen(retorno); ++i)
-	{
-		printf("%c", retorno);
-	}
-	*/
-
 	printf("\n\n");
 	fclose(f);
 	return 0;
