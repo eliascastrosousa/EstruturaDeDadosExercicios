@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#define tam 1
+#define tam 5
 
 	struct funcionario{
     int id;
@@ -23,11 +23,18 @@
         exit(1);
     }
 
-    struct funcionario func;
 
-    func = ColetaDados();
+    struct funcionario func[tam];
+    printf("------------------------- Carregando Estrutura de Formulario -----------------------\n\n");
+    for (int i = 0; i < tam; ++i){
+       func[i] = ColetaDados();
 
-    int gravacao = fwrite(&func, sizeof(struct funcionario), 1, p);
+    }
+
+    int gravacao = fwrite(&func[0], sizeof(struct funcionario), 1, p);
+    fwrite(&func[1], sizeof(struct funcionario), 1, p);
+    fwrite(&func[2], sizeof(struct funcionario), 1, p);
+
 
     if (gravacao != NULL){
         printf("Gravado com Sucesso!!\n");
@@ -43,44 +50,35 @@
         exit(1);
     };
 
-    //importando dados...
-
     printf("\nImportando dados...\n\n");
 
-    struct funcionario f;
+    fread(&func,sizeof(struct funcionario),1,p);
 
-    fread(f.id,sizeof(struct funcionario),1,p);
-    fread(&f.nome,sizeof(struct funcionario),1,p);
-    fread(&f.idade,sizeof(struct funcionario),1,p);
-    fread(&f.sal,sizeof(struct funcionario),1,p);
-
-    fread(p,"\nID: %d \nNome: %s \nIdade: %d \nSalario: %0.2f", f.id, f.nome, f.idade,f.sal );
-
-
-    printf("ID: %d \nNome: %s \nIdade: %d \nSalario: %f", f.id, f.nome, f.idade, f.sal);
+    printf("ID: %d \nNome: %sIdade: %d \nSalario: %0.2f\n\n", func[2].id, func[2].nome, func[2].idade, func[2].sal);
 
     fclose(p);
+    return 0;
 
     }
 
 struct  funcionario ColetaDados() {
-    struct funcionario func[tam];
-    printf("-------------------------Carregando Estrutura de Formulario-----------------------\n\n");
-    for (int  c= 0; c < tam; ++c){
-        printf("Digite o ID do funcionario [%d]: ",c+1);
-        scanf("%d",&func[c].id);
+    struct funcionario f_st;
+
+        printf("Digite o ID do funcionario : ");
+        scanf("%d",&f_st.id);
 
         getchar();
-        printf("Digite o nome do funcionario [%d]: ",c+1);
-        fgets(func[c].nome,30,stdin);
+        printf("Digite o nome do funcionario : ");
+        fgets(f_st.nome,30,stdin);
 
-        printf("Digite a idade do funcionario [%d]: ",c+1);
-        scanf("%d",&func[c].idade);
+        printf("Digite a idade do funcionario : ");
+        scanf("%d",&f_st.idade);
 
-        printf("Digite o Salario do funcionario [%d]: ",c+1);
-        scanf("%f",&func[c].sal);
+        printf("Digite o Salario do funcionario : ");
+        scanf("%f",&f_st.sal);
         printf("----------------------------------------------------------------------------------");
         printf("\n");
 
-    }
+        return f_st;
+
 }
