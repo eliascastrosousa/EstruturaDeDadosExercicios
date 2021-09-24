@@ -16,6 +16,7 @@ struct tipo_ficha_cadastral{ //instrução da ficha cadastral, e dentro dela a str
 void main(){
 
 struct tipo_ficha_cadastral alunos[tam];
+
 printf("Aperte Enter ");
   for(int i = 0; i<tam; i++){
     getchar();
