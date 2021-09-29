@@ -13,7 +13,7 @@ if (p == NULL){
 }
 
 for (int i = 0; i < 5; ++i){
-	printf("Digite o P[%d]",i+1);
+	printf("Digite o P[%d]: ",i+1);
 	scanf("%d",&p[i]);
 }
 

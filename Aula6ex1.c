@@ -11,6 +11,6 @@
 	};
 
     int main(){
-        printf("Struct: %d\n"s,izeof(struct funcionario) );
+        printf("Struct: %d\n"sizeof(struct funcionario) );
         return 0;
     }
