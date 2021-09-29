@@ -6,11 +6,11 @@
 	struct funcionario{
     int id; //4
     char nome[30]; //30
-    int idade; //4
-    float sal; //4
+    int idade; //
+    float sal; //8
 	};
-x'
+
     int main(){
-        printf("Struct: %d\n",sizeof(struct funcionario) );
+        printf("Struct: %d\n"s,izeof(struct funcionario) );
         return 0;
     }
