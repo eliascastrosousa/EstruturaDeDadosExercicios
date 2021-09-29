@@ -14,10 +14,8 @@ if (p == NULL){
 p[0] = 1;
 
 for (int i = 0; i < tam; ++i){
-
         printf("P[%d] : %d \n\n",i+1,p[i]);
-        p[i] = i+2;
-
+        p[i] = (p[i-1]+2);
 	}
 
 free(p);
