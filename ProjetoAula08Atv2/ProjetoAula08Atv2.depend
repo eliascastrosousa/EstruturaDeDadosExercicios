@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1633567147 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv2\ponto.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"ponto.h"
+
+1633567172 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv2\ponto.h
+
+1633567187 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ponto.h"
+

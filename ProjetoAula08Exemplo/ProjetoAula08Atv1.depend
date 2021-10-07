@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1633560698 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv1\minhalib.c
+
+1633560536 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minhalib.h"
+
+1633559952 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv1\minhalib.h
+
