@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 /*Funcao Soma*/
 int func_soma(int x, int y){
     int soma;
     soma = x+y;
-    return soma;
+    return printf("Resultado: %d",soma);
 }

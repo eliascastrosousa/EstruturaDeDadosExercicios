@@ -1,4 +1,6 @@
-/*Versão iterativa*/
+#include <stdio.h>
+#include <stdlib.h>
+#include "minhalib.h"
 
 int func_inte(int n){
    int i = n;

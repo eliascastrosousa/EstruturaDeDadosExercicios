@@ -13,14 +13,23 @@ programa. */
 #include <stdio.h>
 #include <stdlib.h>
 #include "operacoes.h"
+#include "entrada.h"
 
 int main(){
+    int x, y, num;
     printf("Digite um numero: ");
     scanf("%d", &x);
     printf("Digite outro numero: ");
     scanf("%d", &y);
 
-    printf("Resultado: %d",func_soma;)
+    func_entrada(num);
 
-    return 0;
+switch(num){
+    case 1:
+        func_soma( x,  y);
+        func_entrada(num);
+    case 0:
+        break;
+}
+
 }
