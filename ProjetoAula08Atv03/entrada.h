@@ -1,2 +1,2 @@
-func_entrada(int num);
+func_entradaCalc(int num);
 

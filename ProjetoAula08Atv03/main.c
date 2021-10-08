@@ -13,23 +13,38 @@ programa. */
 #include <stdio.h>
 #include <stdlib.h>
 #include "operacoes.h"
-#include "entrada.h"
 
 int main(){
-    int x, y, num;
-    printf("Digite um numero: ");
-    scanf("%d", &x);
-    printf("Digite outro numero: ");
-    scanf("%d", &y);
+    float x, y,result;
+    int num;
 
-    func_entrada(num);
+     do{
+         printf("Soma: [1] \nSubtracao: [2] \nMultiplicacao: [3] \nDivisao: [4] \nResultado da ultima operacao: [5] \nou Sair: [0] \nDigite:  ");
+         scanf("%d",&num);
 
-switch(num){
-    case 1:
-        func_soma( x,  y);
-        func_entrada(num);
-    case 0:
-        break;
-}
-
+        switch(num){
+            case 1:
+                printf("\nSelecionado: Soma!\n\n");
+                result = func_soma( x,  y);
+                break;
+            case 2:
+                printf("\nSelecionado: Subtracao!\n\n");
+                result = func_sub( x,  y);
+                break;
+            case  3:
+                printf("\nSelecionado: Multiplicacao!\n\n");
+                 result = func_mult( x,  y);
+                break;
+            case 4:
+                printf("\nSelecionado: Divisao!\n\n");
+                 result = func_div( x,  y);
+                break;
+            case 5:
+                printf("\nUltimo Resultado: %0.2f\n\n",result);
+                break;
+            default:
+                printf("Informacao invalida, tente novamente. \n\n");
+                break;
+        }
+    }while(num != 0);
 }

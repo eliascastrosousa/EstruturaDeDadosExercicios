@@ -1,19 +1,20 @@
 # depslib dependency file v1.0
-1633572142 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\entrada.c
-	<stdio.h>
-	<stdlib.h>
-
-1633572080 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\operacoes.c
-	<stdio.h>
-	<stdlib.h>
-
-1633572080 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\main.c
+1633718732 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\entrada.c
 	<stdio.h>
 	<stdlib.h>
 	"operacoes.h"
 	"entrada.h"
 
-1633570030 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\operacoes.h
+1633722270 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\operacoes.c
+	<stdio.h>
+	<stdlib.h>
 
-1633572128 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\entrada.h
+1633719711 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operacoes.h"
+
+1633719437 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\operacoes.h
+
+1633718448 c:\users\elias\documents\github\estruturadedadosexercicios\projetoaula08atv03\entrada.h
 
