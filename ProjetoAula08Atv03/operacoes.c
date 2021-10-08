@@ -10,6 +10,7 @@ float func_soma(float x, float y){
     scanf("%f", &y);
     soma = x+y;
     printf("Resultado: %0.2f\n\n",soma);
+    return soma;
 }
 
 /*Funcao substracao*/
@@ -20,7 +21,7 @@ float func_sub(float x, float y){
     printf("Digite o outro numero: ");
     scanf("%f", &y);
     sub = x-y;
-    printf("Resultado: %0.2f\n\n",sub);
+    return printf("Resultado: %0.2f\n\n",sub);
 }
 
 /*Funcao Soma*/

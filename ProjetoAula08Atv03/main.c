@@ -19,8 +19,10 @@ int main(){
     int num;
 
      do{
+         printf("---------------\n");
          printf("Soma: [1] \nSubtracao: [2] \nMultiplicacao: [3] \nDivisao: [4] \nResultado da ultima operacao: [5] \nou Sair: [0] \nDigite:  ");
          scanf("%d",&num);
+         printf("---------------\n");
 
         switch(num){
             case 1:
