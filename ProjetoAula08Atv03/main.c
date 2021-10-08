@@ -45,7 +45,7 @@ int main(){
                 printf("\nUltimo Resultado: %0.2f\n\n",result);
                 break;
             default:
-                printf("Informacao invalida, tente novamente. \n\n");
+                printf("\nInformacao invalida, tente novamente. \n\n");
                 break;
         }
     }while(num != 0);
