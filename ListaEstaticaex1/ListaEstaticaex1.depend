@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1635285566 source:c:\users\elias\documents\github\estruturadedadosexercicios\listaestaticaex1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ListaSequencial.h"
+
+1635285567 c:\users\elias\documents\github\estruturadedadosexercicios\listaestaticaex1\listasequencial.h
+

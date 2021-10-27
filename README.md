@@ -1,2 +1,0 @@
-# EstruturaDeDadosExercicios
- Aulas
