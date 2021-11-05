@@ -19,16 +19,17 @@ CadastroTam(int n);
 void main(){
     int n, *p=NULL;
 
-    n =3;
+    printf("Digite um inteiro n: " );
+    scanf("%d", &n);
 
     //função para alocar a memoria no ponteiro
     p = CadastroTam(n);
 
     printf("\n\t\t  == Ficha Cadastral  ==\n");
 
-    Cadastro cad[n];
+    Cadastro cad;
 
-    cad[n] = entraDados();
+    cad = entraDados();
 
     printf("------------------------------------------------------------\n");
 
@@ -36,9 +37,9 @@ void main(){
 
     printf("\t\t == Relatorio do Cadastro == \n");
 
-    printf("\nNome: %s", cad[n].nome);
-    printf("\nProfissao: %s", cad[n].endereco);
-    printf("\nIdade: %d\n\n", cad[n].idade);
+    printf("\nNome: %s", cad.nome);
+    printf("\nIdade: %d", cad.idade);
+    printf("\nEndereco: %s\n\n", cad.endereco);
     system("pause");
 
 }
@@ -52,6 +53,7 @@ CadastroTam(int n){
 Cadastro entraDados(){
     Cadastro cad;
         printf("------------------------------------------------------------\n");
+        getchar();
         printf("Digite o nome: ");
         fgets(cad.nome, 29, stdin);
         cad.nome[strlen(cad.nome) - 1] = '\0';
