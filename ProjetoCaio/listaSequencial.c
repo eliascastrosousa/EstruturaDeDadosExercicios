@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "listaSequencial.h"
@@ -14,10 +15,6 @@ Lista *cria_lista(){
         li->qtd=0;
     }
     return li;
-}
-
-void libera_lista(Lista *li){
-    free(li);
 }
 
 int tamanho_lista(Lista *li){
@@ -139,9 +136,13 @@ int consulta_lista_mat(Lista *li, int mat, struct aluno *al){
     while(i < li->qtd && li->dados[i].matricula != mat){
         i++;
     }
-    if(i == li->qtd){//elemento nao encontrado
+    if(i == li->qtd){
         return 0;
     }
     *al = li->dados[i];
     return 1;
+}
+
+void libera_lista(Lista *li){
+    free(li);
 }

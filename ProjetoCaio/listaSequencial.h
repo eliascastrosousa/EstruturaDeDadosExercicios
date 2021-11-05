@@ -8,8 +8,6 @@ typedef struct lista Lista;
 
 Lista *cria_lista();
 
-void libera_lista(Lista *li);
-
 int tamanho_lista(Lista *li);
 
 int lista_cheia(Lista *li);
@@ -29,3 +27,5 @@ int remove_lista(Lista *li, int matricula);
 int consulta_lista_pos(Lista * li, int pos, struct aluno *al);
 
 int consulta_lista_mat(Lista * li, int mat, struct aluno *al);
+
+void libera_lista(Lista *li);

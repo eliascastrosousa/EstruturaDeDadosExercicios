@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1635725151 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetocaio\listasequencial.c
+	<stdio.h>
+	<stdlib.h>
+	"listaSequencial.h"
+
+1635725061 c:\users\elias\documents\github\estruturadedadosexercicios\projetocaio\listasequencial.h
+
+1635718738 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetocaio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"listaSequencial.h"
+
