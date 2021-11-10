@@ -1,4 +1,4 @@
-/*Crie uma função recursiva que receba um número inteiro “n” e imprima todos os
+/*3. Crie uma função recursiva que receba um número inteiro “n” e imprima todos os
 números naturais entre 0 e “n”, em ordem crescente.*/
 
 #include <stdio.h>

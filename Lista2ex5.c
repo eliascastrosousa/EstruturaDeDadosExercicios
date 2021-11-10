@@ -7,50 +7,56 @@ digite os dados desse vetor dentro de uma outra função.*/
 #include <stdio.h>
 #include <stdlib.h>
 
+//criação da struct
 typedef struct cadastro{
     char nome[30];
     int idade;
     char endereco[30];
 }Cadastro;
 
-Cadastro entraDados();
-CadastroTam(int n);
+//criação das funções
+Cadastro coletaDados();
+Cadastro *CadastroQtd(int n);
+void liberaDados(Cadastro *p );
 
+//main
 void main(){
-    int n, *p=NULL;
+    int n=0;
+    Cadastro *p=NULL; //ponteiro p
 
-    printf("Digite um inteiro n: " );
+    printf("Digite o numero de cadastro a ser feito: " );
     scanf("%d", &n);
 
     //função para alocar a memoria no ponteiro
-    p = CadastroTam(n);
+    p = CadastroQtd( n);
 
     printf("\n\t\t  == Ficha Cadastral  ==\n");
 
-    Cadastro cad;
-
-    cad = entraDados();
-
+    for(int c=0; c<n; c++){
+            p[c] = coletaDados();
+    }
     printf("------------------------------------------------------------\n");
 
     printf("\n\nRegistro finalizado....\n\n\n");
-
     printf("\t\t == Relatorio do Cadastro == \n");
 
-    printf("\nNome: %s", cad.nome);
-    printf("\nIdade: %d", cad.idade);
-    printf("\nEndereco: %s\n\n", cad.endereco);
+    for(int c = 0; c<n; c++){
+        printf("\nNome do candidato [%d]: %s", c+1, p[c].nome);
+        printf("\nIdade do candidato [%d]: %d",c+1, p[c].idade);
+        printf("\nEndereco do candidato [%d]: %s\n\n",c+1, p[c].endereco);
+    }
+
     system("pause");
 
 }
 
-CadastroTam(int n){
-    int *cadTam;
-    cadTam = (int*) malloc(n*sizeof(Cadastro));
-    return cadTam;
+Cadastro *CadastroQtd(int n){
+    int *quantidade;
+    quantidade = (int*) malloc(n*sizeof(Cadastro));
+    return quantidade;
 }
 
-Cadastro entraDados(){
+Cadastro coletaDados(){
     Cadastro cad;
         printf("------------------------------------------------------------\n");
         getchar();
