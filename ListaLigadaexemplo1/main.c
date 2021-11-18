@@ -7,6 +7,7 @@ int main(){
     Lista *li;
 
     li = cria_lista();
+
     x = tamLista(li);
     printf("\nO tamanho da lista e: %d\n", x);
 
@@ -41,6 +42,7 @@ int main(){
     al3.n2 = 3.9;
     al3.n3 = 7.6;
     printf("\n");
+
     x = insere_inicio_lista(li, al);
     if(x){
         printf("\ninserido no inicio com sucesso!");
@@ -79,7 +81,7 @@ int main(){
         printf("\nNao foi possivel Remover do final!\n");
     }
 
-    x = remove_lista(li, matricula);
+    x = remove_lista(li, mat);
     if(x){
         printf("\nElemento Removido com sucesso!\n");
     }else{
@@ -93,8 +95,8 @@ int main(){
     printf("\n%d", al.n2);
     printf("\n%d", al.n3);
 
-    x= consulta_lista_mat(li, matricula, &al);
-    printf("\n\nMatricula encontrada na posicao %d: ", matricula);
+    x= consulta_lista_mat(li, mat, &al);
+    printf("\n\nMatricula encontrada na posicao %d: ", mat);
     printf("\n%d", al.matricula);
     printf("\n%f", al.n1);
     printf("\n%d", al.n2);

@@ -9,18 +9,18 @@ typedef struct candidato{
     int id;
     char nome[tam];
     char profissao[tam];
-    double telefone;
+    int telefone;
 }Candidato;
 
 //Criação das funções
 Candidato entraDados();
-void imprimeDados(Candidato cand[], int n );
+void imprimeDados(Candidato p[], int n );
 QtdCandidatos(int n);
 void liberaMemoria();
 
 
 void main(){
-    int n, *p=NULL;
+    int n, *p=NULL; //ponteiro apontando para nulo
 
     FILE *fp = fopen("arquivo.txt", "wb");
     if (fp == NULL){
@@ -33,20 +33,20 @@ void main(){
     scanf("%d", &n);
 
     //função para alocar a memoria no ponteiro
-    p = QtdCandidatos(n);
+    p = QtdCandidatos(n); //endereço de p ta apontando para
 
     printf("\n\n\t\t  == Cadastro Candidatos a Vaga ==\n\n");
-    Candidato cand[n];
+    Candidato p;
 
     for (int i = 0; i < n; ++i){
-        cand[i] = entraDados();
+        p[i] = entraDados();
     }
     printf("------------------------------------------------------------\n");
 
     printf("\n\nRegistro finalizado....\n\n\n");
     printf("\t\t == Relatorio de Candidatos == \n");
 
-    imprimeDados(cand, n);
+    imprimeDados(p, n);
     printf("\n------------------------------------------------------------\n\b");
 
     system("pause");
@@ -60,9 +60,9 @@ void main(){
 }
 
 QtdCandidatos(int n){
-    int *quantcand;
+    int *quantcand; //criado um ponteiro quantcand
     quantcand = (int*) malloc(n*sizeof(Candidato));
-    return quantcand;
+    return quantcand; // retornando o endereço de memoria que vai apontar para o tamanho de  n structs de candidatos
 }
 
 Candidato entraDados(){
