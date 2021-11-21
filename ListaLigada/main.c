@@ -33,12 +33,20 @@ int main(){
         printf("\nNão foi possivel inserir o aluno!\n");
     }
 
-     x = insere_final_lista(li, al);
+     x = insere_final_lista(li, al2);
     if(x){
         printf("\nInserido no final com sucesso\n");
     }else{
         printf("\nNão foi possivel inserir o aluno!\n");
     }
+
+     x = insere_lista_ordenada(li, al3);
+    if(x){
+        printf("\nInserido de forma ordenada com sucesso\n");
+    }else{
+        printf("\nNão foi possivel inserir o aluno!\n");
+    }
+
 
 
     x = tamLista(li);

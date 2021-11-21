@@ -72,8 +72,7 @@ int insere_inicio_lista(Lista *li, ALUNO al){
     return 1;
 }
 
-
-int insere_final_lista(Lista *li, ALUNO al){
+int insere_final_lista(Lista *li, ALUNO al2){
     if(li == NULL){
         return 0;
     }
@@ -81,7 +80,7 @@ int insere_final_lista(Lista *li, ALUNO al){
     if(no==NULL){
         return 0;
     }
-    no->dados = al;
+    no->dados = al2;
     no->prox= NULL;
     if((*li) == NULL){
         *li = no;
@@ -93,5 +92,35 @@ int insere_final_lista(Lista *li, ALUNO al){
         aux->prox = no;
     }
     return 1;
+}
+
+int insere_lista_ordenada(Lista *li, ALUNO al3){
+    if(li == NULL){
+        return 0;
+    }
+    ELEM *no = (ELEM*) malloc (sizeof(ELEM));
+    if(no==NULL){
+        return 0;
+    }
+    no->dados = al3;
+    if(listaVazia(li)){
+        no->prox = (*li);
+        *li = no;
+        return 1;
+    }else{
+        ELEM *ant, *atual = *li;
+        while(atual != NULL && atual ->dados.matricula < al3.matricula){
+            ant = atual;
+            atual = atual->prox;
+        }
+        if(atual == *li){
+                no->prox=(*li);
+                    *li = no;
+           }else{
+                no->prox = ant->prox;
+                ant->prox=no;
+           }
+           return 1;
+    }
 }
 
