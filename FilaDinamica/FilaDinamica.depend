@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1637536564 source:c:\users\elias\documents\github\estruturadedadosexercicios\filadinamica\filadinamica.c
+	<stdio.h>
+	<stdlib.h>
+	"filaDinamica.h"
+
+1637536216 c:\users\elias\documents\github\estruturadedadosexercicios\filadinamica\filadinamica.h
+
+1637536490 source:c:\users\elias\documents\github\estruturadedadosexercicios\filadinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"filaDinamica.h"
+
