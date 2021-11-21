@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1637431065 source:c:\users\elias\documents\github\estruturadedadosexercicios\lse\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LSE.h"
+
+1637431037 c:\users\elias\documents\github\estruturadedadosexercicios\lse\lse.h
+
+1637431146 source:c:\users\elias\documents\github\estruturadedadosexercicios\lse\lse.c
+	<stdio.h>
+	<stdlib.h>
+	"LSE.h"
+

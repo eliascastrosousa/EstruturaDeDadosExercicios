@@ -30,3 +30,68 @@ void apagaLista(Lista *li){ //passa o endereço da inteira que se quer liberar
         free(li); //ao final, libera a cabeça da lista
     }
 }
+
+int tamLista(Lista *li){
+    if(li==NULL){
+        return 0;
+    }
+    int acum=0;
+    ELEM *no = *li;
+    while(no != NULL){
+        acum++;
+        no = no->prox;
+    }
+    return acum;
+}
+
+int listaCheia(Lista *li){
+    return 0;
+}
+
+int listaVazia(Lista *li){
+    if(li == NULL){
+        return 1;
+    }
+    if(*li == NULL){
+        return 1;
+    }
+    return 0;
+}
+
+int insere_inicio_lista(Lista *li, ALUNO al){
+ if(li == NULL){
+        return 0;
+    }
+    ELEM *no = (ELEM*) malloc (sizeof(ELEM));
+    if(no==NULL){
+        return 0;
+    }
+    no->dados = al;
+    no->prox = (*li);
+    *li = no;
+    return 1;
+}
+
+
+int insere_final_lista(Lista *li, ALUNO al){
+    if(li == NULL){
+        return 0;
+    }
+    ELEM *no = (ELEM*) malloc (sizeof(ELEM));
+    if(no==NULL){
+        return 0;
+    }
+    no->dados = al;
+    no->prox= NULL;
+    if((*li) == NULL){
+        *li = no;
+    }else{
+        ELEM *aux= *li;
+        while(aux->prox != NULL){
+            aux = aux->prox;
+        }
+        aux->prox = no;
+    }
+    return 1;
+}
+
