@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1637541350 source:c:\users\elias\documents\github\estruturadedadosexercicios\pilhadinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilhaDinamica.h"
+
+1637541350 c:\users\elias\documents\github\estruturadedadosexercicios\pilhadinamica\pilhadinamica.h
+
