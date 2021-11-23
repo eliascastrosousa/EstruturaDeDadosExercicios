@@ -16,24 +16,22 @@ int main(){
         system("pause");
         exit(1);
     }
+     struct funcionario dados_func;
 
     printf("\n\t\t\t\t Bem vindo as Industrias Acme!\n\n");
     m = menuLista();
     do {
-
             switch (m){
-
                 case 1: //[1] Adicionar funcionário
-                    //FUNCIONARIO func; //verificar como receber os dados da função entra dados e alocar na lista
 
-                    //func = entraDados();
-                    //x = insere_lista_ordenada(li, func );
+                    dados_func = entraDados();
+                    x = insere_lista_ordenada(li, dados_func );
                     if(x){
                         printf("\nInserido de forma ordenada com sucesso!\n");
                     }else{
                         printf("\nNão foi possivel inserir o Funcionario!\n");
                     }
-
+                    x=NULL;
                     break;
 
 

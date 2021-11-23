@@ -1,4 +1,4 @@
-typedef struct func{
+typedef struct funcionario{
     int id;
     char nome[50];
     char endereco[50];
