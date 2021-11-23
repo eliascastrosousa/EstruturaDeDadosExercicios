@@ -7,7 +7,7 @@ int main(){
     setlocale(LC_ALL,"portuguese");
 
     Lista *li;
-    int x, menu;
+    int x, menu, m;
     li = criaLista();
 
     FILE *fp = fopen("arquivo.txt", "wb");
@@ -18,28 +18,58 @@ int main(){
     }
 
     printf("\n\t\t\t\t Bem vindo as Industrias Acme!\n\n");
+    m = menuLista();
+    do {
 
-    printf("Menu\n\n");
-    printf("[1] Adicionar funcionário \n[2] Excluir funcionário \n[3] Editar funcionário ");
-    printf("\n[4] Buscar funcionário por ID \n[5] Exibir funcionário ordenados por ID ");
-    printf("\n[6] Exibir uma lista de funcionários por faixa salarial. \n[0] Sair da aplicação.\nDigite: ");
-    scanf("%d", &menu);
+            switch (m){
 
-
-
-
-
-
-
-
-
-    printf("\nSalvando os arquivos...\n\n");
-    //fwrite(cand, sizeof(Candidato), n, fp);
-    fclose(fp);
-    apagaLista(li);
-    printf("Limpando dados da sessão...\nObrigado.\n\n");
+                case 1: //[1] Adicionar funcionário
+                    printf("Digite o ID: ");
+                    printf("Digite o Nome: ");
+                    printf("Digite o Endereço: ");
+                    printf("Digite a Idade: ");
+                    printf("Digite o Salário: ");
+                    printf("Digite o Cargo: ");
+                    //scanf("%d", &)
+                    break;
 
 
+                case 2 : //[2] Excluir funcionário
+                    printf("");
+                    break;
 
-    system("pause");
-}
+
+                case 3: //[3] Editar funcionário
+                    printf("");
+                    break;
+
+
+                case 4:  //[4] Buscar funcionário por ID
+                    printf("");
+                    break;
+
+
+                case 5:  //[5] Exibir funcionário ordenados por ID
+                    printf("");
+                    break;
+
+
+                case 6: //[6] Exibir uma lista de funcionários por faixa salarial.
+                    printf("");
+                    break;
+
+
+                default:
+                    printf("Opção invalida\n");
+            }
+            }while(m != 0);
+
+            printf("\n\nSalvando arquivos...\n\n");
+            //fwrite(cand, sizeof(Candidato), n, fp);
+            fclose(fp);
+            apagaLista(li);
+            printf("Limpando dados da sessão...\nObrigado.\n\n");
+            system("pause");
+    }
+
+

@@ -12,3 +12,5 @@ typedef struct elemento* Lista;
 Lista *criaLista();
 
 void apagaLista(Lista *li);
+
+int menuLista(menu);

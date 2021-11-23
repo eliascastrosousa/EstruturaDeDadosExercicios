@@ -31,3 +31,12 @@ void apagaLista(Lista *li){ //passa o endereço da inteira que se quer liberar
     }
 }
 
+int menuLista(){
+    int menu;
+    printf("Menu\n\n");
+    printf("[1] Adicionar funcionário \n[2] Excluir funcionário \n[3] Editar funcionário ");
+    printf("\n[4] Buscar funcionário por ID \n[5] Exibir funcionário ordenados por ID ");
+    printf("\n[6] Exibir uma lista de funcionários por faixa salarial. \n[0] Sair da aplicação.\nDigite: ");
+    scanf("%d", &menu);
+    return menu;
+}
