@@ -121,3 +121,24 @@ int insere_lista_ordenada(Lista *li, FUNCIONARIO dados_func){
     }
 }
 
+int remove_lista(Lista *li, int identificador){
+    if(li == NULL){
+        return 0;
+    }
+    ELEM *ant, *no = *li;
+    while(no != NULL && no->dados.id != identificador){
+        ant = no;
+        no = no->prox;
+    }
+    if(no ==NULL){
+        return 0;
+    }
+    if(no == *li){
+        *li = no->prox;
+    }else{
+    ant->prox = no->prox;
+    }
+    free(no);
+    return 1;
+}
+

@@ -11,8 +11,6 @@ typedef struct elemento* Lista;
 
 Lista *criaLista();
 
-void apagaLista(Lista *li);
-
 int menuLista(menu);
 
 FUNCIONARIO entraDados();
@@ -22,4 +20,8 @@ int insere_lista_ordenada(Lista *li, FUNCIONARIO dados_func);
 int listaVazia(Lista *li);
 
 int tamLista(Lista *li);
+
+int remove_lista(Lista *li, int id);
+
+void apagaLista(Lista *li);
 

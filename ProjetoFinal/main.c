@@ -7,7 +7,7 @@ int main(){
     setlocale(LC_ALL,"portuguese");
 
     Lista *li;
-    int x, menu, m;
+    int x, menu, m, identificador;
     li = criaLista(); //memoria alocada
 
     FILE *fp = fopen("arquivo.txt", "wb");
@@ -35,7 +35,17 @@ int main(){
                     break;
 
                 case 2 : //[2] Excluir funcionário
-                    printf("");
+
+                    printf("\nSelecionado: Remover funcionário!\n");
+                    printf("Digite o id do Funcionario que deseja Remover: ");
+                    scanf("%d", &identificador);
+
+                    x =  remove_lista(li,identificador);
+                    if(x){
+                        printf("\nInserido de forma ordenada com sucesso!\n\n");
+                    }else{
+                        printf("\nNão foi possivel inserir o Funcionario!\n");
+                    }
                     break;
 
 
