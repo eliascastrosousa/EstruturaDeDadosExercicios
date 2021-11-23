@@ -72,6 +72,7 @@ int main(){
                     printf("\nSelecionado: Mostrar qtd de funcionarios! \n");
                     x = tamLista(li);
                     printf("\nO tamanho da lista é: %d\n\n",x);
+                    break;
 
                 default:
                     printf("Opção invalida\n");
