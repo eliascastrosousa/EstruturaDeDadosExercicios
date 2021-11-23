@@ -42,9 +42,9 @@ int main(){
 
                     x =  remove_lista(li,identificador);
                     if(x){
-                        printf("\nInserido de forma ordenada com sucesso!\n\n");
+                        printf("\nFuncionario Removido com sucesso!\n\n");
                     }else{
-                        printf("\nNão foi possivel inserir o Funcionario!\n");
+                        printf("\nNão foi possivel Remover o Funcionario!\n");
                     }
                     break;
 
@@ -68,6 +68,10 @@ int main(){
                     printf("");
                     break;
 
+                case 7: //Mostrar qtd de funcionarios
+                    printf("\nSelecionado: Mostrar qtd de funcionarios! \n");
+                    x = tamLista(li);
+                    printf("\nO tamanho da lista é: %d\n\n",x);
 
                 default:
                     printf("Opção invalida\n");
