@@ -8,7 +8,7 @@ int main(){
 
     Lista *li;
     int x, menu, m;
-    li = criaLista();
+    li = criaLista(); //memoria alocada
 
     FILE *fp = fopen("arquivo.txt", "wb");
     if (fp == NULL){
@@ -19,21 +19,20 @@ int main(){
      struct funcionario dados_func;
 
     printf("\n\t\t\t\t Bem vindo as Industrias Acme!\n\n");
-    m = menuLista();
+
     do {
+            m = menuLista();
             switch (m){
                 case 1: //[1] Adicionar funcionário
-
+                    printf("\nSelecionado: Adicionar funcionário!\n");
                     dados_func = entraDados();
-                    x = insere_lista_ordenada(li, dados_func );
+                    x = insere_lista_ordenada(li,dados_func );
                     if(x){
-                        printf("\nInserido de forma ordenada com sucesso!\n");
+                        printf("\nInserido de forma ordenada com sucesso!\n\n");
                     }else{
                         printf("\nNão foi possivel inserir o Funcionario!\n");
                     }
-                    x=NULL;
                     break;
-
 
                 case 2 : //[2] Excluir funcionário
                     printf("");

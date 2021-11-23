@@ -33,7 +33,7 @@ void apagaLista(Lista *li){ //passa o endereço da inteira que se quer liberar
 
 int menuLista(){
     int menu;
-    printf("Menu\n\n");
+    printf("\t\t-------Menu-------\n\n");
     printf("[1] Adicionar funcionário \n[2] Excluir funcionário \n[3] Editar funcionário ");
     printf("\n[4] Buscar funcionário por ID \n[5] Exibir funcionário ordenados por ID ");
     printf("\n[6] Exibir uma lista de funcionários por faixa salarial. \n[0] Sair da aplicação.\nDigite: ");
@@ -43,7 +43,7 @@ int menuLista(){
 
 FUNCIONARIO entraDados(){
     FUNCIONARIO func;
-        printf("------------------------------------------------------------\n");
+        printf("------------------------------------------------------------\n\n");
         printf("Digite o ID: ");
         scanf("%d", &func.id);
 
@@ -57,11 +57,67 @@ FUNCIONARIO entraDados(){
         printf("Digite a Idade: ");
         scanf("%d", &func.idade);
 
-        printf("Digite o Salário: ");
-        scanf("%f", &func.salario);
-
+        getchar();
         printf("Digite o Cargo: ");
         fgets(func.cargo, 49, stdin);
 
+        printf("Digite o Salário: ");
+        scanf("%f", &func.salario);
+
     return func;
 }
+
+int listaVazia(Lista *li){
+    if(li == NULL){
+        return 1;
+    }
+    if(*li == NULL){
+        return 1;
+    }
+    return 0;
+}
+
+int tamLista(Lista *li){
+    if(li==NULL){
+        return 0;
+    }
+    int acum=0;
+    ELEM *no = *li;
+    while(no != NULL){
+        acum++;
+        no = no->prox;
+    }
+    return acum;
+}
+
+
+int insere_lista_ordenada(Lista *li, FUNCIONARIO dados_func){
+    if(li == NULL){
+        return 0;
+    }
+    ELEM *no = (ELEM*) malloc (sizeof(ELEM));
+    if(no==NULL){
+        return 0;
+    }
+    no->dados = dados_func;
+    if(listaVazia(li)){
+        no->prox = (*li);
+        *li = no;
+        return 1;
+    }else{
+        ELEM *ant, *atual = *li;
+        while(atual != NULL && atual ->dados.id < dados_func.id){
+            ant = atual;
+            atual = atual->prox;
+        }
+        if(atual == *li){
+                no->prox=(*li);
+                    *li = no;
+           }else{
+                no->prox = ant->prox;
+                ant->prox=no;
+           }
+           return 1;
+    }
+}
+
