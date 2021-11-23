@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1637632218 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetofinal\listaligada.c
+1637633961 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetofinal\listaligada.c
 	<stdio.h>
 	<stdlib.h>
 	"listaLigada.h"
 
-1637632218 c:\users\elias\documents\github\estruturadedadosexercicios\projetofinal\listaligada.h
+1637633961 c:\users\elias\documents\github\estruturadedadosexercicios\projetofinal\listaligada.h
 
 1637632232 source:c:\users\elias\documents\github\estruturadedadosexercicios\projetofinal\main.c
 	<stdio.h>

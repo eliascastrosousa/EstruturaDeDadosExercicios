@@ -24,13 +24,16 @@ int main(){
             switch (m){
 
                 case 1: //[1] Adicionar funcionário
-                    printf("Digite o ID: ");
-                    printf("Digite o Nome: ");
-                    printf("Digite o Endereço: ");
-                    printf("Digite a Idade: ");
-                    printf("Digite o Salário: ");
-                    printf("Digite o Cargo: ");
-                    //scanf("%d", &)
+                    //FUNCIONARIO func; //verificar como receber os dados da função entra dados e alocar na lista
+
+                    //func = entraDados();
+                    //x = insere_lista_ordenada(li, func );
+                    if(x){
+                        printf("\nInserido de forma ordenada com sucesso!\n");
+                    }else{
+                        printf("\nNão foi possivel inserir o Funcionario!\n");
+                    }
+
                     break;
 
 

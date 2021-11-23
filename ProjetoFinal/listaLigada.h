@@ -4,7 +4,7 @@ typedef struct func{
     char endereco[50];
     int idade;
     float salario;
-    char cargo[30];
+    char cargo[50];
 }FUNCIONARIO;
 
 typedef struct elemento* Lista;
@@ -14,3 +14,6 @@ Lista *criaLista();
 void apagaLista(Lista *li);
 
 int menuLista(menu);
+
+FUNCIONARIO entraDados();
+

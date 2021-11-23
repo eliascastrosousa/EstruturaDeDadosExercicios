@@ -40,3 +40,28 @@ int menuLista(){
     scanf("%d", &menu);
     return menu;
 }
+
+FUNCIONARIO entraDados(){
+    FUNCIONARIO func;
+        printf("------------------------------------------------------------\n");
+        printf("Digite o ID: ");
+        scanf("%d", &func.id);
+
+        getchar();
+        printf("Digite o Nome: ");
+        fgets(func.nome, 49, stdin);
+
+        printf("Digite o Endereço: ");
+        fgets(func.endereco, 49, stdin);
+
+        printf("Digite a Idade: ");
+        scanf("%d", &func.idade);
+
+        printf("Digite o Salário: ");
+        scanf("%f", &func.salario);
+
+        printf("Digite o Cargo: ");
+        fgets(func.cargo, 49, stdin);
+
+    return func;
+}
